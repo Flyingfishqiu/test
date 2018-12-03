@@ -2,7 +2,7 @@ import unittest
 from selenium import webdriver
 from auto.HTMLTestRunner import HTMLTestRunner
 import re
-
+import time
 
 class Index(unittest.TestCase):
     def setUp(self):
@@ -49,15 +49,18 @@ class Index(unittest.TestCase):
 
     def test_index_category(self):
         # category_个人感悟
+        default = self.driver.current_window_handle
         category_list= self.driver.find_elements_by_xpath('//div[2]/div[1]/div[2]/div/a/span')
         for i in range(0, len(category_list)):
             try:
                 self.driver.find_element_by_xpath('//div[2]/div[1]/div[2]/div/a[{}]/span'.format(i+1)).click()
+                self.driver.switch_to.window(self.driver.window_handles[i+1])
                 url = re.match(r"http://www.jiafanblog.com/types/\d*", self.driver.current_url)
                 if url:
                     self.assertEqual(self.driver.current_url, url.group())
-                self.assertNotEqual(self.driver.current_url, "http://www.jiafanblog.com/")
+                self.driver.switch_to.window(default)
             except Exception as e:
+                self.driver.switch_to.window(default)
                 self.driver.save_screenshot('./image/test_index_category.png')
                 raise AssertionError("没有跳转到分类")
 
