@@ -20,6 +20,7 @@ class Index(unittest.TestCase):
             self.driver.find_element_by_xpath('//div[2]/div[2]/div/div[1]/div/div[2]/a').click()
             self.assertNotEqual(self.driver.current_url, "http://www.jiafanblog.com/")
         except Exception as e:
+            self.driver.save_screenshot('./image/test_index_free.png')
             raise AssertionError("没有跳转到分类")
             # print("没有跳转到分类")
 
@@ -30,6 +31,7 @@ class Index(unittest.TestCase):
             self.driver.find_element_by_xpath('//div[2]/div/div[1]/div/div[1]/div/div[1]/div/a').click()
             self.assertEqual(self.driver.current_url, "http://www.jiafanblog.com/about")
         except Exception as e:
+            self.driver.save_screenshot('./image/test_index_info.png')
             raise AssertionError("没有跳转到个人页面")
 
     def test_index_image(self):
@@ -42,6 +44,7 @@ class Index(unittest.TestCase):
             skip_src_value = skip_src.get_attribute()
             self.assertEqual(src_vlaue, skip_src_value)
         except Exception as e:
+            self.driver.save_screenshot('./image/test_index_image.png')
             raise AssertionError("跳转到详情页错误")
 
     def test_index_category(self):
@@ -55,6 +58,7 @@ class Index(unittest.TestCase):
                     self.assertEqual(self.driver.current_url, url.group())
                 self.assertNotEqual(self.driver.current_url, "http://www.jiafanblog.com/")
             except Exception as e:
+                self.driver.save_screenshot('./image/test_index_category.png')
                 raise AssertionError("没有跳转到分类")
 
     def test_index_essaycount(self):
@@ -63,6 +67,7 @@ class Index(unittest.TestCase):
             count = self.driver.find_element_by_css_selector('.m-inline-block').text
             self.assertEqual(len(essay), int(count))
         except Exception as e:
+            self.driver.save_screenshot('./image/test_index_essaycount.png')
             raise AssertionError("文章条数统计有误")
 
     def tearDown(self):
