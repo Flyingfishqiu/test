@@ -41,9 +41,9 @@ class Index(unittest.TestCase):
             src = self.driver.find_element_by_xpath('//div[2]/div[1]/div/div[2]/a/img')
             src_vlaue = src.get_attribute("src")
             src.click()
-
-            skip_src = self.driver.find_element_by_xpath('//*[@id="waypoint"]/div/div[2]/img')
             self.driver.switch_to.window(self.driver.window_handles[1])
+            skip_src = self.driver.find_element_by_xpath('//*[@id="waypoint"]/div/div[2]/img')
+
 
             skip_src_value = skip_src.get_attribute("src")
             self.assertEqual(src_vlaue, skip_src_value)
