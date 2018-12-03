@@ -46,20 +46,22 @@ class Index(unittest.TestCase):
 
     def test_index_category(self):
         # category_个人感悟
-        category_list= self.driver.find_element_by_xpath('/a/div/div[2]/div[1]/div[2]/div/a/span')
-        for i in category_list:
+        category_list= self.driver.find_elements_by_xpath('//div[2]/div[1]/div[2]/div/a/span')
+        for i in range(0, len(category_list)):
             try:
-                self.driver.find_element_by_xpath('/a/div/div[2]/div[1]/div[2]/div/a[{}]/span'.format(i+1)).click()
+                self.driver.find_element_by_xpath('//div[2]/div[1]/div[2]/div/a[{}]/span'.format(i+1)).click()
                 url = re.match(r"http://www.jiafanblog.com/types/\d*", self.driver.current_url)
-                self.assertEqual(self.driver.current_url, url.group())
+                if url:
+                    self.assertEqual(self.driver.current_url, url.group())
+                self.assertNotEqual(self.driver.current_url, "http://www.jiafanblog.com/")
             except Exception as e:
                 raise AssertionError("没有跳转到分类")
 
     def test_index_essaycount(self):
         try:
-            essay = self.driver.find_element_by_xpath('//div/div/div[1]/h3/a')
-            count = self.driver.find_element_by_xpath('//div[1]/div/div[2]/h2')
-            self.assertEqual(len(essay), count)
+            essay = self.driver.find_elements_by_xpath('//div/div/div[1]/h3/a')
+            count = self.driver.find_element_by_css_selector('.m-inline-block').text
+            self.assertEqual(len(essay), int(count))
         except Exception as e:
             raise AssertionError("文章条数统计有误")
 

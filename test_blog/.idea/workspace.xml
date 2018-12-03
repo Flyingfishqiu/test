@@ -9,10 +9,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/test_blog$Unittests_for_index_test_Index_test_index_category.coverage" NAME="Unittests for index_test.Index.test_index_category Coverage Results" MODIFIED="1543807722715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
     <SUITE FILE_PATH="coverage/test_blog$Unittests_for_index_test_Index_test_index.coverage" NAME="Unittests for index_test.Index.test_index Coverage Results" MODIFIED="1543800485025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test_blog$Unittests_in_test_blog.coverage" NAME="Unittests in test_blog Coverage Results" MODIFIED="1543801574961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test_blog$Unittests_for_index_test_Index_test_index_essaycount.coverage" NAME="Unittests for index_test.Index.test_index_essaycount Coverage Results" MODIFIED="1543807367925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
     <SUITE FILE_PATH="coverage/test_blog$Unittests_for_index_test_Index.coverage" NAME="Unittests for index_test.Index Coverage Results" MODIFIED="1543800024279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/test_blog$Unittests_in_index_test_py.coverage" NAME="Unittests in index_test.py Coverage Results" MODIFIED="1543802783952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test_blog$Unittests_in_index_test_py.coverage" NAME="Unittests in index_test.py Coverage Results" MODIFIED="1543807836670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test_blog$test.coverage" NAME="test Coverage Results" MODIFIED="1543802754472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
   </component>
   <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
@@ -26,25 +28,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
+          <entry key="html" value="3" />
           <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
+          <entry key="HTML" value="3" />
           <entry key="Python" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="41" />
-          <entry key="py" value="1057" />
+          <entry key="py" value="1217" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1098" />
+          <entry key="Python" value="1258" />
         </counts>
       </usages-collector>
     </session>
@@ -54,24 +56,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/auto/index_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+            <state relative-caret-position="1384">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1543805439146" expanded="true" signature="137:142" ph="..." />
-                <marker date="1543805439146" expanded="true" signature="300:429" ph="..." />
-                <marker date="1543805439146" expanded="true" signature="2249:2250" ph="..." />
-                <marker date="1543805439146" expanded="true" signature="2249:2552" ph="..." />
+                <marker date="1543807722695" expanded="false" signature="137:142" ph="..." />
+                <marker date="1543807722695" expanded="true" signature="300:429" ph="..." />
+                <marker date="1543807722695" expanded="true" signature="2373:2686" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index_test_py.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -129,7 +121,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="115" />
     <option name="y" value="35" />
     <option name="width" value="548" />
@@ -186,33 +178,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index_test_py.html">
-    <configuration name="index_test_py.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test_blog/index_test_py.html">
+  <component name="RunManager" selected="JavaScript Debug.Test Results - Unittests_in_index_test_py.html">
+    <configuration name="Test Results - Unittests_in_index_test_py.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test_blog/Test Results - Unittests_in_index_test_py.html">
       <method v="2" />
     </configuration>
-    <configuration name="res.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test_blog/auto/res.html">
+    <configuration name="index_essaycount.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test_blog/index_essaycount.html">
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests for index_test.Index.test_index_category" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="test_blog" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/auto" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auto/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;index_test.Index.test_index_category&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for index_test.Index.test_index_essaycount" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="test_blog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/auto" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;index_test.Index.test_index_essaycount&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests in index_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -230,35 +230,20 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_blog" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="test_blog" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python tests.Unittests in index_test.py" />
-      <item itemvalue="Python tests.Unittests in test_blog" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="JavaScript Debug.res.html" />
-      <item itemvalue="JavaScript Debug.index_test_py.html" />
+      <item itemvalue="Python tests.Unittests for index_test.Index.test_index_category" />
+      <item itemvalue="Python tests.Unittests for index_test.Index.test_index_essaycount" />
+      <item itemvalue="JavaScript Debug.index_essaycount.html" />
+      <item itemvalue="JavaScript Debug.Test Results - Unittests_in_index_test_py.html" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index_test_py.html" />
+        <item itemvalue="JavaScript Debug.Test Results - Unittests_in_index_test_py.html" />
         <item itemvalue="Python tests.Unittests in index_test.py" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="JavaScript Debug.res.html" />
-        <item itemvalue="Python tests.Unittests in test_blog" />
+        <item itemvalue="Python tests.Unittests for index_test.Index.test_index_category" />
+        <item itemvalue="JavaScript Debug.index_essaycount.html" />
+        <item itemvalue="Python tests.Unittests for index_test.Index.test_index_essaycount" />
       </list>
     </recent_temporary>
   </component>
@@ -276,39 +261,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_index_test_Index - 2018.12.03 at 09h 19m 37s.xml">
-      <configuration name="Unittests for index_test.Index" configurationId="tests" />
+    <history-entry file="Unittests_for_index_test_Index_test_index_essaycount - 2018.12.03 at 11h 17m 08s.xml">
+      <configuration name="Unittests for index_test.Index.test_index_essaycount" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_Index - 2018.12.03 at 09h 20m 43s.xml">
-      <configuration name="Unittests for index_test.Index" configurationId="tests" />
+    <history-entry file="Unittests_for_index_test_Index_test_index_essaycount - 2018.12.03 at 11h 18m 23s.xml">
+      <configuration name="Unittests for index_test.Index.test_index_essaycount" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_Index_test_index - 2018.12.03 at 09h 28m 29s.xml">
-      <configuration name="Unittests for index_test.Index.test_index" configurationId="tests" />
+    <history-entry file="Unittests_for_index_test_Index_test_index_essaycount - 2018.12.03 at 11h 20m 19s.xml">
+      <configuration name="Unittests for index_test.Index.test_index_essaycount" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_index_test_py - 2018.12.03 at 09h 36m 34s.xml">
-      <configuration name="Unittests in index_test.py" configurationId="tests" />
+    <history-entry file="Unittests_for_index_test_Index_test_index_essaycount - 2018.12.03 at 11h 22m 05s.xml">
+      <configuration name="Unittests for index_test.Index.test_index_essaycount" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_index_test_py - 2018.12.03 at 09h 41m 57s.xml">
-      <configuration name="Unittests in index_test.py" configurationId="tests" />
+    <history-entry file="Unittests_for_index_test_Index_test_index_essaycount - 2018.12.03 at 11h 22m 26s.xml">
+      <configuration name="Unittests for index_test.Index.test_index_essaycount" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_index_test_py - 2018.12.03 at 09h 45m 57s.xml">
-      <configuration name="Unittests in index_test.py" configurationId="tests" />
+    <history-entry file="Unittests_for_index_test_Index_test_index_essaycount - 2018.12.03 at 11h 22m 55s.xml">
+      <configuration name="Unittests for index_test.Index.test_index_essaycount" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_blog - 2018.12.03 at 09h 46m 56s.xml">
-      <configuration name="Unittests in test_blog" configurationId="tests" />
+    <history-entry file="Unittests_for_index_test_Index_test_index_category - 2018.12.03 at 11h 24m 52s.xml">
+      <configuration name="Unittests for index_test.Index.test_index_category" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_index_test_py - 2018.12.03 at 09h 51m 00s.xml">
-      <configuration name="Unittests in index_test.py" configurationId="tests" />
+    <history-entry file="Unittests_for_index_test_Index_test_index_category - 2018.12.03 at 11h 26m 25s.xml">
+      <configuration name="Unittests for index_test.Index.test_index_category" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_index_test_py - 2018.12.03 at 09h 52m 48s.xml">
-      <configuration name="Unittests in index_test.py" configurationId="tests" />
+    <history-entry file="Unittests_for_index_test_Index_test_index_category - 2018.12.03 at 11h 28m 50s.xml">
+      <configuration name="Unittests for index_test.Index.test_index_category" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_index_test_py - 2018.12.03 at 10h 06m 54s.xml">
+    <history-entry file="Unittests_in_index_test_py - 2018.12.03 at 11h 31m 21s.xml">
       <configuration name="Unittests in index_test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1293" height="733" extended-state="6" />
+    <frame x="-6" y="-6" width="1293" height="733" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1738076" />
@@ -321,8 +307,8 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.75827813" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39900663" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.660596" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -362,6 +348,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index_essaycount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index_test_py.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
@@ -371,14 +364,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auto/index_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+        <state relative-caret-position="1384">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1543805439146" expanded="true" signature="137:142" ph="..." />
-            <marker date="1543805439146" expanded="true" signature="300:429" ph="..." />
-            <marker date="1543805439146" expanded="true" signature="2249:2250" ph="..." />
-            <marker date="1543805439146" expanded="true" signature="2249:2552" ph="..." />
+            <marker date="1543807722695" expanded="false" signature="137:142" ph="..." />
+            <marker date="1543807722695" expanded="true" signature="300:429" ph="..." />
+            <marker date="1543807722695" expanded="true" signature="2373:2686" ph="..." />
           </folding>
         </state>
       </provider>
