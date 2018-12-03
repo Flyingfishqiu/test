@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Test Results &mdash; Unittests in index_test.py</title>
+<title>Test Results &mdash; Unittests for index_test.Index.test_index_category</title>
 <style type="text/css">
           html {
             height: 100%
@@ -572,8 +572,8 @@ jQuery.cookie = function(name, value, options) {
 <body>
 <div id="container">
 <div id="header">
-<div class="time" xmlns="">44.09 s</div>
-<h1>Unittests in index_test.py: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">6 total, </span><span class="failed">4 failed, </span><span class="passed">2 passed</span></strong>
+<div class="time" xmlns="">16.75 s</div>
+<h1>Unittests for index_test.Index.test_index_category: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">1 total, </span><span class="passed">1 passed</span></strong>
 </h1>
 <div id="treecontrol">
 <ul>
@@ -589,75 +589,23 @@ jQuery.cookie = function(name, value, options) {
 </div>
 <div id="content">
 <ul id="tree">
-<li xmlns="" class="level top failed open">
+<li xmlns="" class="level top open">
 <span><em class="time">
-<div class="time">44.09 s</div>
-</em>auto</span>
-<ul>
-<li class="level suite failed open">
-<span><em class="time">
-<div class="time">44.09 s</div>
+<div class="time">16.75 s</div>
 </em>index_test</span>
 <ul>
-<li class="level suite failed open">
+<li class="level suite open">
 <span><em class="time">
-<div class="time">44.09 s</div>
+<div class="time">16.75 s</div>
 </em>Index</span>
 <ul>
-<li class="level test failed open">
-<span><em class="time">
-<div class="time">7.73 s</div>
-</em><em class="status">failed</em>test_index_category</span>
-<ul>
-<li class="text">
-<span class="stderr">Failure<br/>Traceback (most recent call last):<br/>  File &quot;E:\frame\测试\py_test\test_blog\auto\index_test.py&quot;, line 56, in test_index_category<br/>    self.assertNotEqual(self.driver.current_url, &quot;http://www.jiafanblog.com/&quot;)<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 848, in assertNotEqual<br/>    raise self.failureException(msg)<br/>AssertionError: &#39;http://www.jiafanblog.com/&#39; == &#39;http://www.jiafanblog.com/&#39;<br/>During handling of the above exception, another exception occurred:<br/>Traceback (most recent call last):<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 59, in testPartExecutor<br/>    yield<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 615, in run<br/>    testMethod()<br/>  File &quot;E:\frame\测试\py_test\test_blog\auto\index_test.py&quot;, line 58, in test_index_category<br/>    raise AssertionError(&quot;没有跳转到分类&quot;)<br/>AssertionError: 没有跳转到分类<br/></span>
-</li>
-</ul>
-</li>
 <li class="level test">
 <span><em class="time">
-<div class="time">6.99 s</div>
-</em><em class="status">passed</em>test_index_essaycount</span>
-</li>
-<li class="level test failed open">
-<span><em class="time">
-<div class="time">8.09 s</div>
-</em><em class="status">failed</em>test_index_free</span>
+<div class="time">16.75 s</div>
+</em><em class="status">passed</em>test_index_category</span>
 <ul>
 <li class="text">
-<span class="stderr">Failure<br/>Traceback (most recent call last):<br/>  File &quot;E:\frame\测试\py_test\test_blog\auto\index_test.py&quot;, line 21, in test_index_free<br/>    self.assertNotEqual(self.driver.current_url, &quot;http://www.jiafanblog.com/&quot;)<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 848, in assertNotEqual<br/>    raise self.failureException(msg)<br/>AssertionError: &#39;http://www.jiafanblog.com/&#39; == &#39;http://www.jiafanblog.com/&#39;<br/>During handling of the above exception, another exception occurred:<br/>Traceback (most recent call last):<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 59, in testPartExecutor<br/>    yield<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 615, in run<br/>    testMethod()<br/>  File &quot;E:\frame\测试\py_test\test_blog\auto\index_test.py&quot;, line 23, in test_index_free<br/>    raise AssertionError(&quot;没有跳转到分类&quot;)<br/>AssertionError: 没有跳转到分类<br/></span>
-</li>
-</ul>
-</li>
-<li class="level test failed open">
-<span><em class="time">
-<div class="time">6.98 s</div>
-</em><em class="status">failed</em>test_index_image</span>
-<ul>
-<li class="text">
-<span class="stderr">Failure<br/>Traceback (most recent call last):<br/>  File &quot;E:\frame\测试\py_test\test_blog\auto\index_test.py&quot;, line 39, in test_index_image<br/>    src_vlaue = src.get_attribute()<br/>TypeError: get_attribute() missing 1 required positional argument: &#39;name&#39;<br/>During handling of the above exception, another exception occurred:<br/>Traceback (most recent call last):<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 59, in testPartExecutor<br/>    yield<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 615, in run<br/>    testMethod()<br/>  File &quot;E:\frame\测试\py_test\test_blog\auto\index_test.py&quot;, line 45, in test_index_image<br/>    raise AssertionError(&quot;跳转到详情页错误&quot;)<br/>AssertionError: 跳转到详情页错误<br/></span>
-</li>
-</ul>
-</li>
-<li class="level test failed open">
-<span><em class="time">
-<div class="time">7.07 s</div>
-</em><em class="status">failed</em>test_index_info</span>
-<ul>
-<li class="text">
-<span class="stderr">Failure<br/>Traceback (most recent call last):<br/>  File &quot;D:\PyCharm 2018.2.3\helpers\pycharm\teamcity\diff_tools.py&quot;, line 32, in _patched_equals<br/>    old(self, first, second, msg)<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 839, in assertEqual<br/>    assertion_func(first, second, msg=msg)<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 1220, in assertMultiLineEqual<br/>    self.fail(self._formatMessage(msg, standardMsg))<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 680, in fail<br/>    raise self.failureException(msg)<br/>AssertionError: &#39;http://www.jiafanblog.com/#&#39; != &#39;http://www.jiafanblog.com/about&#39;<br/>- http://www.jiafanblog.com/#<br/>?                           ^<br/>+ http://www.jiafanblog.com/about<br/>?                           ^^^^^<br/>During handling of the above exception, another exception occurred:<br/>Traceback (most recent call last):<br/>  File &quot;E:\frame\测试\py_test\test_blog\auto\index_test.py&quot;, line 31, in test_index_info<br/>    self.assertEqual(self.driver.current_url, &quot;http://www.jiafanblog.com/about&quot;)<br/>  File &quot;D:\PyCharm 2018.2.3\helpers\pycharm\teamcity\diff_tools.py&quot;, line 38, in _patched_equals<br/>    raise error<br/>teamcity.diff_tools.EqualsAssertionError:  :: http://www.jiafanblog.com/# != http://www.jiafanblog.com/about<br/>During handling of the above exception, another exception occurred:<br/>Traceback (most recent call last):<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 59, in testPartExecutor<br/>    yield<br/>  File &quot;C:\Program Files (x86)\Python37-32\lib\unittest\case.py&quot;, line 615, in run<br/>    testMethod()<br/>  File &quot;E:\frame\测试\py_test\test_blog\auto\index_test.py&quot;, line 33, in test_index_info<br/>    raise AssertionError(&quot;没有跳转到个人页面&quot;)<br/>AssertionError: 没有跳转到个人页面<br/></span>
-</li>
-</ul>
-</li>
-<li class="level test">
-<span><em class="time">
-<div class="time">7.25 s</div>
-</em><em class="status">passed</em>test_index_title</span>
-<ul>
-<li class="text">
-<span class="stderr"></span>
-</li>
-</ul>
+<span class="stderr">Ran 1 test in 16.754s<br/>OK<br/></span>
 </li>
 </ul>
 </li>
@@ -669,7 +617,7 @@ jQuery.cookie = function(name, value, options) {
 </div>
 </div>
 <div id="footer">
-<p>Generated by PyCharm on 18-12-3 上午11:39</p>
+<p>Generated by PyCharm on 18-12-3 下午3:01</p>
 </div>
 </body>
 </html>

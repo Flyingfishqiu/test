@@ -8,6 +8,7 @@ class Index(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.get("http://www.jiafanblog.com")
+        self.default = self.driver.current_window_handle
 
     def test_index_title(self):
         # 博文标题
@@ -38,18 +39,24 @@ class Index(unittest.TestCase):
         try:
             # 通过图片跳转详情页
             src = self.driver.find_element_by_xpath('//div[2]/div[1]/div/div[2]/a/img')
-            src_vlaue = src.get_attribute()
+            src_vlaue = src.get_attribute("src")
             src.click()
+
             skip_src = self.driver.find_element_by_xpath('//*[@id="waypoint"]/div/div[2]/img')
-            skip_src_value = skip_src.get_attribute()
+            self.driver.switch_to.window(self.driver.window_handles[1])
+
+            skip_src_value = skip_src.get_attribute("src")
             self.assertEqual(src_vlaue, skip_src_value)
+
+            self.driver.switch_to.window(self.default)
         except Exception as e:
             self.driver.save_screenshot('./image/test_index_image.png')
+            self.driver.switch_to.window(self.default)
             raise AssertionError("跳转到详情页错误")
 
     def test_index_category(self):
         # category_个人感悟
-        default = self.driver.current_window_handle
+
         category_list= self.driver.find_elements_by_xpath('//div[2]/div[1]/div[2]/div/a/span')
         for i in range(0, len(category_list)):
             try:
@@ -58,10 +65,11 @@ class Index(unittest.TestCase):
                 url = re.match(r"http://www.jiafanblog.com/types/\d*", self.driver.current_url)
                 if url:
                     self.assertEqual(self.driver.current_url, url.group())
-                self.driver.switch_to.window(default)
+                self.driver.switch_to.window(self.default)
             except Exception as e:
-                self.driver.switch_to.window(default)
+
                 self.driver.save_screenshot('./image/test_index_category.png')
+                self.driver.switch_to.window(self.default)
                 raise AssertionError("没有跳转到分类")
 
     def test_index_essaycount(self):
