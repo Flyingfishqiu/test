@@ -1,7 +1,7 @@
 import unittest
-from src.control import Index_control
+from .control import Index_control
 from selenium import webdriver
-from src.config.conn import ConnMysql
+from config.conn import ConnMysql
 
 
 class Index(unittest.TestCase):
@@ -14,12 +14,12 @@ class Index(unittest.TestCase):
         self.control = Index_control(self.driver, self.conn)
 
     def test_index_title(self):
-        self.control.get_path("title").click()
+        self.control.click_element("title")
 
     def test_index_free(self):
         try:
             # 个人感悟
-            self.control.get_path("free").click()
+            self.control.click_element("free")
             self.assertNotEqual(self.driver.current_url, self.base_url)
         except Exception as e:
             self.driver.save_screenshot('./image/test_index_free.png')
@@ -28,7 +28,7 @@ class Index(unittest.TestCase):
     def test_index_info(self):
         # 跳转个人页面
         try:
-            self.control.get_path("user_info").click()
+            self.control.click_element("user_info")
             self.assertEqual(self.driver.current_url, self.base_url)
         except Exception as e:
             self.driver.save_screenshot('./image/test_index_info.png')
@@ -39,12 +39,13 @@ class Index(unittest.TestCase):
             # 通过图片跳转详情页
             src = self.control.get_path("start_image_details")
             src_vlaue = src.get_attribute("src")
-            src.click()
-            self.driver.switch_to.window(self.driver.window_handles[1])
+            self.control.click_element("start_image_details")
+            self.control.change_window(self.driver.window_handles[1])
             skip_src = self.control.get_path("end_image_deftails")
             skip_src_value = skip_src.get_attribute("src")
             self.assertEqual(src_vlaue, skip_src_value)
-            self.driver.switch_to.window(self.default)
+            self.control.change_window(self.default)
+
         except Exception as e:
             self.driver.save_screenshot('./image/test_index_image.png')
             self.driver.switch_to.window(self.default)
@@ -53,7 +54,7 @@ class Index(unittest.TestCase):
     def test_index_essaycount(self):
         try:
             essay = self.control.get_path("end_image_deftails")
-            count = self.control.get_path("count").text
+            count = self.control.get_text("count")
             self.assertEqual(len(essay), int(count))
         except Exception as e:
             self.driver.save_screenshot('./image/test_index_essaycount.png')
@@ -61,6 +62,7 @@ class Index(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
+
 
 if __name__ == '__main__':
     unittest.main()
