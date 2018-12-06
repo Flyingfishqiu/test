@@ -1,9 +1,10 @@
 from auto.HTMLTestRunner import HTMLTestRunner
-from test_case.config.test_parse import ParametrizedTestCase
 from test_case.pares.read_case import read_case
 from test_case.pares.pars_case import Pares
 import importlib
 import unittest
+from test_case.casepool.case01 import Index
+import time
 
 
 class Dispense(object):
@@ -16,37 +17,17 @@ class Dispense(object):
         model = importlib.import_module(path)
         return model
 
-    def get_url(self):
-        return self.parse.get_url()
-
-    def dispense_parse(self):
-
-        for info in self.parse.test_info():
-
-            name = info["test"]["name"]
-            err_msg = info["test"]["name"]
-            image_url = info["test"]["image_url"]
-            xpath_name = info["test"]["xpath_name"]
-            model = self.dispense_test_model()
-            index = getattr(model, "Index")
-            # getattr(index, name)(xpath_name, image_url, err_msg)
-            index().setUp()
-            # suite = unittest.TestSuite()
-            # suite.addTest(index(name, xpath_name=xpath_name, image_url=image_url,
-            #                                                err_msg=err_msg))
-            suite = ParametrizedTestCase.parametrize(index, name, xpath_name=xpath_name, image_url=image_url, err_msg=err_msg)
-
-            with open('../report/demo.html', 'wb') as f:
-                runner = HTMLTestRunner(f, verbosity=2, title='博客测试')
-                runner.run(suite)
-
     def run_case(self):
-       pass
-
-
+        suite = unittest.TestSuite()
+        # suite.addTest(Index("test_index_title"))
+        suite.addTest(unittest.makeSuite(Index))
+        path_time = "../report/"+time.strftime("%Y-%m-%d", time.localtime())+"-博客.html"
+        with open(path_time, 'wb') as f:
+            runner = HTMLTestRunner(f, verbosity=2, title='博客测试')
+            runner.run(suite)
 
 
 if __name__ == '__main__':
-    d = Dispense().dispense_parse()
-    # unittest.main()
+    d = Dispense().run_case()
+
 

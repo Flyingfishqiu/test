@@ -3,35 +3,31 @@ from auto.HTMLTestRunner import HTMLTestRunner
 from test_case.config.control import Index_control
 from selenium import webdriver
 from config.conn import ConnMysql
-from test_case.casepool.dispense import Dispense
-from test_case.config.test_parse import ParametrizedTestCase
+from test_case.pares.read_case import read_case
+from test_case.pares.pars_case import Pares
 
 
-class Index(ParametrizedTestCase):
+class Index(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
-        self.dispense = Dispense()
-        self.base_url = self.dispense.get_url()
+        read = read_case()
+        self.parse = Pares(read)
+        self.base_url = self.parse.get_url()
         self.driver.get(self.base_url)
         self.default = self.driver.current_window_handle
         self.conn = ConnMysql('root', 'q123456')
         self.control = Index_control(self.driver, self.conn)
 
-    def test_index_free2(self):
-        try:
-            # 个人感悟
-            self.control.click_element("free")
-            self.assertNotEqual(self.driver.current_url, self.base_url)
-        except Exception as e:
-            self.driver.save_screenshot('./image/test_index_free.png')
-            raise AssertionError("没有跳转到分类")
+    def test_index_title(self):
+        info = self.parse.get_test_info('test_index_title')
+        self.control.click_element(info["xpath_name"])
 
-    def test_index_title(self, xpath_name, image_url, err_msg):
-        print(xpath_name, image_url, err_msg)
-        self.control.click_element(xpath_name)
-
-    def test_index_free(self, xpath_name, image_url, err_msg):
-        print(xpath_name, image_url, err_msg)
+    def test_index_free(self):
+        info = self.parse.get_test_info('test_index_free')
+        xpath_name = info["xpath_name"]
+        image_url = info["image_url"]
+        err_msg = info["err_msg"]
+        print(info)
         try:
             # 个人感悟
             self.control.click_element(xpath_name)
@@ -40,8 +36,12 @@ class Index(ParametrizedTestCase):
             self.driver.save_screenshot(image_url)
             raise AssertionError(err_msg)
 
-    def test_index_info(self, xpath_name, image_url, err_msg):
-        print(xpath_name, image_url, err_msg)
+    def test_index_info(self):
+        info = self.parse.get_test_info('test_index_info')
+        xpath_name = info["xpath_name"]
+        image_url = info["image_url"]
+        err_msg = info["err_msg"]
+        print(info)
         # 跳转个人页面
         try:
             self.control.click_element(xpath_name)
@@ -50,8 +50,12 @@ class Index(ParametrizedTestCase):
             self.driver.save_screenshot(image_url)
             raise AssertionError(err_msg)
 
-    def test_index_image(self, xpath_name, image_url, err_msg):
-        print(xpath_name, image_url, err_msg)
+    def test_index_image(self):
+        info = self.parse.get_test_info('test_index_image')
+        xpath_name = info["xpath_name"]
+        image_url = info["image_url"]
+        err_msg = info["err_msg"]
+        print(info)
         try:
             # 通过图片跳转详情页
             src = self.control.get_path(xpath_name)
@@ -68,17 +72,21 @@ class Index(ParametrizedTestCase):
             self.driver.switch_to.window(self.default)
             raise AssertionError(err_msg)
 
-    def test_index_essaycount(self, xpath_name, image_url, err_msg):
-        print(xpath_name, image_url, err_msg)
+    def test_index_essaycount(self):
+        info = self.parse.get_test_info('test_index_essaycount')
+        xpath_name = info["xpath_name"]
+        image_url = info["image_url"]
+        err_msg = info["err_msg"]
+        print(info)
         try:
             essay = self.control.get_path("end_image_deftails")
-            count = self.control.get_text("count")
+            count = self.control.get_text(xpath_name)
             self.assertEqual(len(essay), int(count))
         except Exception as e:
             self.driver.save_screenshot(image_url)
             raise AssertionError(err_msg)
 
-    def __del__(self):
+    def tearDown(self):
         self.driver.quit()
 
 

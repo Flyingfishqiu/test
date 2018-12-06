@@ -34,13 +34,19 @@ def read_case():
         },
         {
             "test": {
+                "name": "test_index_title",
+                "err_msg": "没有跳转到详情",
+                "image_url": './image/test_index_title.png',
+                "xpath_name": "title"
+            }
+        },
+        {
+            "test": {
                 "name": "test_index_info",
                 "err_msg": "没有跳转到个人页面",
                 "image_url": './image/test_index_info.png',
                 "xpath_name": "user_info"
             }
         },
-
-
     ]
     return data
