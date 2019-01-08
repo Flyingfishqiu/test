@@ -7,8 +7,12 @@ import time
 
 
 class MyTest(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = mydriver()
+
     def setUp(self):
-        self.driver = mydriver()
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()
         # self.driver.get('https://account.36kr.com/?ok_url=https%3A%2F%2F36kr.com%2F#/login?pos=header')
@@ -33,7 +37,10 @@ class MyTest(unittest.TestCase):
 
     def tearDown(self):
         time.sleep(2)
-        self.driver.quit()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
 
 
 if __name__ == '__main__':
