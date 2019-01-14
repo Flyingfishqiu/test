@@ -80,5 +80,5 @@ def session_bky():
 
 
 if __name__ == '__main__':
-    # post_boky_01()
-    session_bky()
+    post_boky_01()
+    # session_bky()

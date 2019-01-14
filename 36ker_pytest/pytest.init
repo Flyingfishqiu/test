@@ -1,0 +1,6 @@
+[pytest]
+addopts= -s --html=./report/test.html reruns=2
+testpaths = ./tset_case
+python_files = test_*.py
+python_classes = Test*
+python_functions =test_*

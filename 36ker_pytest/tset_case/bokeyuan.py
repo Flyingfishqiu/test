@@ -58,3 +58,15 @@ driver.refresh()
     可以通过一个 文件 就可以直接运行 整套流程 ，生成测试报告 ，
     在通过 工具 用来 一键构建
 """
+
+"""
+    1.查询所有学生的数学成绩，显示学生姓名name, 分数， 由高到低
+    select s.name, g.scort ,g.kemu, from student s, grade g where s.id = g.id and g.kemu='数学' order by g.scort desc;
+    2.统计每个学生的总成绩,显示字段：姓名，总成绩
+    select s.name, sum(g.scort)  from student s,grade g where s.id=g.id group by s.name 
+    3.统计每个学生的总成绩（由于学生可能有重复名字）,显示字段：学生id，姓名，总成绩
+    select s.id, s.name, sum(g.scort)  from student s,grade g where s.id=g.id group by g.id   
+    4.列出各门课程成绩最好的学生， 要求显示字段: 学号，姓名,科目，成绩
+    select s.name, sum(g.scort)  from student s,grade g where s.id=g.id group by g.kemu order by g. scort limt 1
+    5.列出各门课程成绩最好的2位学生， 要求显示字段: 学号，姓名, 科目，成绩
+"""
