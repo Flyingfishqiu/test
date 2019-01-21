@@ -1,0 +1,32 @@
+添加表字段
+alter table 表名 add 字段名 字段类型 字段约束;
+alter table classes add age int default 0;
+
+修改表字段
+alter table 表名 change 旧字段名 新字段名 新字段类型 新字段约束;
+alter table classes change age ages int  default 1;
+
+删除表字段
+alter table 表名 drop 字段名;
+alter table classes drop ages;
+
+添加表数据：
+insert into 表名 values(表中的所有字段);
+ insert into students values(16,"小新",5,120,"男",2,0);
+
+更新表中的数据
+update 表名 set 修改的数据 where 条件;
+update students set height=170 where name="小白";
+
+删除表数据
+delete from 表名 where 条件;
+delete from students where name="小白";
+
+排序 order by
+   select * from 表名 条件 order by 字段名 排序方式(desc|asc——默认);
+显示所有的学生信息，先按照年龄从大-->小排序，当年龄相同时 按照身高从高-->矮排序
+select * from students order by age desc, height desc;
+
+
+查询学生姓名及班级名称
+select s.name,c.name 课程 from students s join classes c on s.cls_id=c.id;

@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>ｌｏｖｅ　＿　林凡</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-01-12 21:53:52</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.027282</p>
-<p class='attribute'><strong>Status:</strong> Pass 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-01-17 15:39:59</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.176224</p>
+<p class='attribute'><strong>Status:</strong> Pass 4 Failure 1</p>
 
 <p class='description'></p>
 </div>
@@ -221,17 +221,17 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='failClass'>
     <td>Test_case.test_au.My_test</td>
-    <td>1</td>
+    <td>5</td>
+    <td>4</td>
     <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',5)">Detail</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_01</div></td>
+    <td class='none'><div class='testcase'>test_04_1: dict() -> new empty dictionary</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -254,11 +254,123 @@ pt1.1:
     </td>
 </tr>
 
+<tr id='ft1.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_04_2: dict() -> new empty dictionary</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        fail</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\测试\project\jianshu\Test_case\test_au.py", line 44, in test_04
+    self.run_test(url=item["url"], methods=item["methods"], data=item["data"], expect=item["expect"], i=item["i"])
+  File "F:\测试\project\jianshu\Test_case\test_au.py", line 53, in run_test
+    self.assertIn(expect, ret)
+AssertionError: 'T03' not found in '{\n  "count": 6,\n  "next": null,\n  "previous": null,\n  "results": [\n    {\n      "dep_id": "T02",\n      "dep_name": "Test\\u5b66\\u96622",\n      "master_name": "Test-Master",\n      "slogan": "Here is Slogan"\n    },\n    {\n      "dep_id": "T04",\n      "dep_name": "Test\\u5b66\\u96624",\n      "master_name": "Test-Master4",\n      "slogan": "Here is Slogan4"\n    },\n    {\n      "dep_id": "T05",\n      "dep_name": "test??05",\n      "master_name": "Test-Master05",\n      "slogan": "Here is Slogan"\n    },\n    {\n      "dep_id": "T06",\n      "dep_name": "test??06",\n      "master_name": "Test-Master06",\n      "slogan": "Here is Slogan"\n    },\n    {\n      "dep_id": "T07",\n      "dep_name": "test??07",\n      "master_name": "Test-Master07",\n      "slogan": "Here is Slogan"\n    },\n    {\n      "dep_id": "T09",\n      "dep_name": "Test\\u5b66\\u9662",\n      "master_name": "Test-Master",\n      "slogan": "Here is Slogan"\n    }\n  ]\n}'
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\测试\project\jianshu\Test_case\test_au.py", line 44, in test_04
+    self.run_test(url=item["url"], methods=item["methods"], data=item["data"], expect=item["expect"], i=item["i"])
+  File "F:\测试\project\jianshu\Test_case\test_au.py", line 53, in run_test
+    self.assertIn(expect, ret)
+AssertionError: 'T03' not found in '{\n  "count": 6,\n  "next": null,\n  "previous": null,\n  "results": [\n    {\n      "dep_id": "T02",\n      "dep_name": "Test\\u5b66\\u96622",\n      "master_name": "Test-Master",\n      "slogan": "Here is Slogan"\n    },\n    {\n      "dep_id": "T04",\n      "dep_name": "Test\\u5b66\\u96624",\n      "master_name": "Test-Master4",\n      "slogan": "Here is Slogan4"\n    },\n    {\n      "dep_id": "T05",\n      "dep_name": "test??05",\n      "master_name": "Test-Master05",\n      "slogan": "Here is Slogan"\n    },\n    {\n      "dep_id": "T06",\n      "dep_name": "test??06",\n      "master_name": "Test-Master06",\n      "slogan": "Here is Slogan"\n    },\n    {\n      "dep_id": "T07",\n      "dep_name": "test??07",\n      "master_name": "Test-Master07",\n      "slogan": "Here is Slogan"\n    },\n    {\n      "dep_id": "T09",\n      "dep_name": "Test\\u5b66\\u9662",\n      "master_name": "Test-Master",\n      "slogan": "Here is Slogan"\n    }\n  ]\n}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_3: dict() -> new empty dictionary</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_4: dict() -> new empty dictionary</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_5: dict() -> new empty dictionary</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
 <tr id='total_row'>
     <td>Total</td>
+    <td>5</td>
+    <td>4</td>
     <td>1</td>
-    <td>1</td>
-    <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>
